@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<AnchorPane id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="org.example.line_pulling_game.HelloController"
+            xmlns:fx="http://javafx.com/fxml/1">
+    <ProgressBar id="progressBar" fx:id="progressBar" layoutX="74.0" layoutY="84.0" prefHeight="56.0" prefWidth="452.0"
+                 progress="0.0"/>
+    <Button id="increaseProgressBar" fx:id="increaseProgressBar" layoutX="452.0" layoutY="298.0" mnemonicParsing="false"
+            text="PUSH ME!!!" onAction="#onButtonClick"/>
+    <ChoiceBox id="teamSelect" fx:id="teamSelect" layoutX="42.0" layoutY="298.0" prefWidth="150.0" onAction="#chooseTeam">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="LEFT Team"/>
+                <String fx:value="RIGHT Team"/>
+            </FXCollections>
+        </items>
+    </ChoiceBox>
+
+</AnchorPane>
