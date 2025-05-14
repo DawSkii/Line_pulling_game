@@ -11,7 +11,7 @@ import static server.ServerMain.updateScore;
 
 public class ClientHandler implements Runnable{
 
-    private Socket socket;
+    private final Socket socket;
     private PrintWriter out;
     private BufferedReader in;
 
@@ -42,6 +42,7 @@ public class ClientHandler implements Runnable{
 
 
     void sendScore(float score){
-        out.println("SCORE " + score);
+        out.println("PROGRESS " + score);
     }
+    void sendWinner(String team){out.println("WINNER " + team);}
 }
